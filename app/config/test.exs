@@ -7,9 +7,9 @@ import Config
 # Run `mix help test` for more information.
 config :app, App.Repo,
   username: "postgres",
-  password: "asd*@&90vp8093pQ76328q19voer324bi",
-  hostname: "db",
-  database: "app#{System.get_env("MIX_TEST_PARTITION")}",
+  password: "postgres",
+  hostname: "localhost",
+  database: "app_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
   pool_size: 10
 
@@ -17,7 +17,7 @@ config :app, App.Repo,
 # you can enable the server option below.
 config :app, AppWeb.Endpoint,
   http: [ip: {127, 0, 0, 1}, port: 4002],
-  secret_key_base: "7GMBPObgdJHI0r6ZK+cjomoN/NkPsk7cAhuFJAgm1wMWbtAHIm3PcCjopazlfRHW",
+  secret_key_base: "EGRYvBwTUVskX6NOzAfx+PslpXkxr4ptqozJTNPOCvo9NAxCBPgwxN6jJDS4Zxl1",
   server: false
 
 # In test we don't send emails.

@@ -3,9 +3,9 @@ import Config
 # Configure your database
 config :app, App.Repo,
   username: "postgres",
-  password: "asd*@&90vp8093pQ76328q19voer324bi",
+  password: "postgres",
   hostname: "db",
-  database: "app",
+  database: "database_name",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -19,11 +19,11 @@ config :app, App.Repo,
 config :app, AppWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
-  http: [ip: {127, 0, 0, 1}, port: 4000],
+  http: [ip: {0, 0, 0, 0}, port: 4000],
   check_origin: false,
   code_reloader: true,
   debug_errors: true,
-  secret_key_base: "hllj8DEGV1N16Wi29fLA44OzE5LRtRbGMU4Zy1gsfJacepVGlfevODQxZxn8oRW4",
+  secret_key_base: "bpY+etpaZasTUF/Lr6XiEBAmZl5d4vkz5WIW38PkSFmESUupOhb6bbREQud87Fli",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
     esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
